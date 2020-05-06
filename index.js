@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+
+const argv = process.argv.slice(2)
+
 const speeng = str => {
   if (typeof str !== 'string') {
     throw new Error('NoT A StRiNG!!')
@@ -16,5 +20,7 @@ const speeng = str => {
 }
 
 const caseMaker = (c, v) => (v >= 5 ? c.toUpperCase() : c)
+
+if (argv.length) console.log(speeng(argv.join(' ')))
 
 module.exports = speeng
