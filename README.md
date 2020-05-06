@@ -26,3 +26,18 @@ import speeng from 'speengbab'
 const mocking = speeng("Ghengis Khan had some pretty good ideas!") // GhEngiS KhAn HaD SomE PrETTy GoOd iDeaS!
 
 ```
+
+#### Command line:
+
+```
+yarn global add speengbab
+
+speeng hello world
+```
+
+
+```
+npm install -g speengbab
+
+speeng hello world
+```
