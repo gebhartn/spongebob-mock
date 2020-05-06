@@ -1,0 +1,13 @@
+{
+  "name": "speengbab",
+  "author": "Nicholas Gebhart <nicholas.gebhart@gmail.com>",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn jest"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
