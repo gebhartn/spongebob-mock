@@ -8,7 +8,9 @@ describe('Test speeng', () => {
 
   it('Should error on empty string', () => {
     const str = ''
-    expect(speeng(str)).toEqual('Not long enough')
+    expect(() => {
+      speeng(str)
+    }).toThrow('ThAt Is NoT LoNg EnOuGH!!')
   })
 
   it('Should error on non-string types', () => {
@@ -16,8 +18,8 @@ describe('Test speeng', () => {
     const obj = { hello: 'world' }
     const fn = () => 'test'
 
-    expect(speeng(arr)).toBe('Not a string')
-    expect(speeng(obj)).toBe('Not a string')
-    expect(speeng(fn)).toBe('Not a string')
+    expect(() => speeng(arr)).toThrow('NoT A StRiNG!!')
+    expect(() => speeng(obj)).toThrow('NoT A StRiNG!!')
+    expect(() => speeng(fn)).toThrow('NoT A StRiNG!!')
   })
 })

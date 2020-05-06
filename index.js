@@ -1,7 +1,11 @@
 const speeng = str => {
-  if (typeof str !== 'string') return 'Not a string'
+  if (typeof str !== 'string') {
+    throw new Error('NoT A StRiNG!!')
+  }
 
-  if (!str.length) return 'Not long enough'
+  if (!str.length) {
+    throw new Error('ThAt Is NoT LoNg EnOuGH!!')
+  }
 
   const length = str.length
   const random = Array.from({ length }, () => Math.floor(Math.random() * 10))
