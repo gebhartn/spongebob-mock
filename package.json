@@ -1,9 +1,12 @@
 {
   "name": "speengbab",
   "author": "Nicholas Gebhart <nicholas.gebhart@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
+  "bin": {
+    "speeng": "./index.js"
+  },
   "scripts": {
     "test": "yarn jest"
   },
