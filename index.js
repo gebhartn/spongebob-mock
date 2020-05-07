@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const argv = process.argv.slice(2)
 const clipboardy = require('clipboardy')
+const argv = process.argv.slice(2)
 
 const copy = (str) => {
   clipboardy.write(str)
@@ -33,13 +33,13 @@ if ((argv[0] === '-c')) {
   const res = speeng(argv.join(' '))
   copy(res)
   console.log(res)
-} else if ((argv[argv.length - 1] = '-c')) {
+} else if ((argv[argv.length - 1] === '-c')) {
   argv.pop()
   const res = speeng(argv.join(' '))
   copy(res)
   console.log(res)
 } else {
-  console.log(speeng(argv.join(' ')))
+  if (argv.length) console.log(speeng(argv.join(' ')))
 }
 
 module.exports = speeng
