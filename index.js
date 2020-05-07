@@ -37,7 +37,7 @@ if ((argv[0] === '-c')) {
   argv.pop()
   const res = speeng(argv.join(' '))
   copy(res)
-  console.log(res);
+  console.log(res)
 } else {
   console.log(speeng(argv.join(' ')))
 }
