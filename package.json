@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "clipboardy": "^2.3.0"
   }
 }
