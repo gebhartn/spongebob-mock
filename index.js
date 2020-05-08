@@ -3,11 +3,11 @@
 const clipboardy = require('clipboardy')
 const argv = process.argv.slice(2)
 
-const copy = (str) => {
-  clipboardy.write(str)
+const copy = str => {
+  clipboardy.writeSync(str)
 }
 
-const speeng = (str) => {
+const speeng = str => {
   if (typeof str !== 'string') {
     throw new Error('NoT A StRiNG!!')
   }
@@ -26,14 +26,13 @@ const speeng = (str) => {
 
 const caseMaker = (c, v) => (v >= 5 ? c.toUpperCase() : c)
 
-
 // handles -c flag at beginning or end of string
-if ((argv[0] === '-c')) {
+if (argv[0] === '-c') {
   argv.shift()
   const res = speeng(argv.join(' '))
   copy(res)
   console.log(res)
-} else if ((argv[argv.length - 1] === '-c')) {
+} else if (argv[argv.length - 1] === '-c') {
   argv.pop()
   const res = speeng(argv.join(' '))
   copy(res)
@@ -43,3 +42,4 @@ if ((argv[0] === '-c')) {
 }
 
 module.exports = speeng
+module.exports.copy = copy
