@@ -1,4 +1,5 @@
 const speeng = require('../index')
+const clipboardy = require('clipboardy')
 
 describe('Test speeng', () => {
   it('Should randomize the casing', () => {
@@ -21,5 +22,26 @@ describe('Test speeng', () => {
     expect(() => speeng(arr)).toThrow('NoT A StRiNG!!')
     expect(() => speeng(obj)).toThrow('NoT A StRiNG!!')
     expect(() => speeng(fn)).toThrow('NoT A StRiNG!!')
+  })
+})
+
+describe('Test clipboardy', () => {
+  it('Should copy the output to clipboard', () => {
+    const str = 'Hello World'
+    const len = str.length
+    speeng.copy(speeng(str))
+
+    const clipboard = clipboardy.readSync()
+
+    expect(clipboard).toHaveLength(len)
+  })
+
+  it('Should not be the same as the input', () => {
+    const str = 'Hello World'
+    speeng.copy(speeng(str))
+
+    const clipboard = clipboardy.readSync()
+
+    expect(clipboard).not.toBe(str)
   })
 })
