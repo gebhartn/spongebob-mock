@@ -2,7 +2,11 @@
 
 gEnERaTe teXt to moCk YoUR fRiENds
 
+<center>
+
 ![screenshot](./scs.png)
+
+</center>
 
 ## Quckstart
 
@@ -29,15 +33,15 @@ const mocking = speeng("Ghengis Khan had some pretty good ideas!") // GhEngiS Kh
 
 #### Command line:
 
-```
+```bash
 yarn global add speengbab
 
-speeng hello world
+speeng hello world # HeLlo WoRlD
 ```
 
 
-```
+```bash
 npm install -g speengbab
 
-speeng hello world
+speeng hello world # HELlo woRld
 ```
