@@ -4,7 +4,7 @@ gEnERaTe teXt to moCk YoUR fRiENds
 
 <center>
 
-![screenshot](./scs.png)
+![screenshot](https://github.com/gebhartn/spongebob-mock/raw/master/scs.png)
 
 </center>
 
