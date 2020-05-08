@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
+const clipboardy = require('clipboardy')
 const argv = process.argv.slice(2)
 
-const speeng = str => {
+const copy = (str) => {
+  clipboardy.write(str)
+}
+
+const speeng = (str) => {
   if (typeof str !== 'string') {
     throw new Error('NoT A StRiNG!!')
   }
@@ -21,6 +26,20 @@ const speeng = str => {
 
 const caseMaker = (c, v) => (v >= 5 ? c.toUpperCase() : c)
 
-if (argv.length) console.log(speeng(argv.join(' ')))
+
+// handles -c flag at beginning or end of string
+if ((argv[0] === '-c')) {
+  argv.shift()
+  const res = speeng(argv.join(' '))
+  copy(res)
+  console.log(res)
+} else if ((argv[argv.length - 1] === '-c')) {
+  argv.pop()
+  const res = speeng(argv.join(' '))
+  copy(res)
+  console.log(res)
+} else {
+  if (argv.length) console.log(speeng(argv.join(' ')))
+}
 
 module.exports = speeng

@@ -45,3 +45,8 @@ npm install -g speengbab
 
 speeng hello world # HELlo woRld
 ```
+
+#### Flags
+
+- `-c` will copy the resulting string to the clipboard. Flag can be added before or after the primary string.
+  - ex. `npx speeng -c lorem ipsum` will result in something like `LOreM iPSum` being added to the clipboard.
